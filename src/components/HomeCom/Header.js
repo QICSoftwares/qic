@@ -1,9 +1,13 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {translogo} from '../../assets/images';
 import Colors from '../../constants/Colors';
+import Icon, {Icons} from '../Icons';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.headerview1}>
       <Image
@@ -11,15 +15,25 @@ const Header = () => {
         style={styles.logoicon}
         resizeMode={'contain'}
       />
-      <Text style={styles.headertext1}>QIC Softwares</Text>
+
+      <View style={styles.drawerIcon}>
+        <TouchableOpacity style={{}} onPress={() => navigation.openDrawer()}>
+          <Icon
+            type={Icons.Ionicons}
+            name={'apps-outline'}
+            color={Colors.white}
+            size={25}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   logoicon: {
-    height: 40,
-    width: 40,
+    height: 30,
+    width: 30,
   },
 
   headertext1: {
@@ -29,7 +43,14 @@ const styles = StyleSheet.create({
 
   headerview1: {
     flexDirection: 'row',
-    padding: 10,
+    paddingVertical: 16,
+    alignItems: 'center',
+    elevation: 5,
+  },
+
+  drawerIcon: {
+    flex: 1,
+    alignItems: 'flex-end',
   },
 });
 

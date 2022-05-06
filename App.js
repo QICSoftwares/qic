@@ -1,8 +1,13 @@
 import React from 'react';
-import HomeScreen from './src/screens/HomeScreen';
+import Navigation from './src/navigation/Navigation';
+import Provider from './src/context/Provider';
 
 const App = () => {
-  return <HomeScreen />;
+  return (
+    <Provider>
+      <Navigation />
+    </Provider>
+  );
 };
 
 export default App;
