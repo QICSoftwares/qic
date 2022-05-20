@@ -3,6 +3,8 @@ import * as Screen from '../screens';
 import Icon, {Icons} from '../components/Icons';
 import React from 'react';
 import Colors from '../constants/Colors';
+import {translogo} from '../assets/images';
+import {Image} from 'react-native';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -37,8 +39,8 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Contact"
-        component={Screen.ContactUs}
+        name="OurWorkScreen "
+        component={Screen.OurWorkScreen}
         options={{
           tabBarIcon: ({color}) => (
             <Icon
@@ -50,12 +52,21 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="OurWorkScreen"
-        component={Screen.OurWorkScreen}
+        name="Request"
+        component={Screen.RequestScreen}
         options={{
-          tabBarIcon: ({color}) => (
-            <Icon type={Icons.Octicons} name="person" color={color} />
-          ),
+          tabBarIcon: ({color}) => {
+            return (
+              <Image
+                source={translogo}
+                style={{
+                  height: 30,
+                  width: 30,
+                }}
+                resizeMode={'contain'}
+              />
+            );
+          },
         }}
       />
     </Tab.Navigator>

@@ -19,8 +19,8 @@ const Header = () => {
       <View style={styles.drawerIcon}>
         <TouchableOpacity style={{}} onPress={() => navigation.openDrawer()}>
           <Icon
-            type={Icons.Ionicons}
-            name={'apps-outline'}
+            type={Icons.Octicons}
+            name={'apps'}
             color={Colors.white}
             size={25}
           />
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 16,
     alignItems: 'center',
-    elevation: 5,
   },
 
   drawerIcon: {

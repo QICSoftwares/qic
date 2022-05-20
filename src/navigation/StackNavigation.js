@@ -10,7 +10,7 @@ const StackNavigation = () => {
     <Stack.Navigator
       initialRouteName="Drawer"
       screenOptions={{headerShown: false}}>
-      <Stack.Screen name="TabNav" component={DrawerNavigation} />
+      <Stack.Screen name="Drawer" component={DrawerNavigation} />
     </Stack.Navigator>
   );
 };

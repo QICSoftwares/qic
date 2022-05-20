@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   textFoot1: {
     color: Colors.primary,
     marginRight: 5,
-    fontFamily: 'MavenPro-Medium',
+    fontFamily: 'MavenPro-Regular',
   },
 });
 
